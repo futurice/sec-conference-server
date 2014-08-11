@@ -1,9 +1,7 @@
-festapp-server
+sec-conference-server
 ==============
 
-[![Build Status](https://travis-ci.org/futurice/festapp-server.svg?branch=travis)](https://travis-ci.org/futurice/festapp-server)
-
-Festapp project page: http://futurice.github.io/festapp-server/
+**Forked from [festapp-server](https://github.com/futurice/festapp-server)**
 
 * Install MongoDB and Redis.
 * Install dependencies: `npm install`
