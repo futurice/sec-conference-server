@@ -7,6 +7,7 @@ var EventSchema = new Schema({
   end_time: Date,       // jshint ignore:line
   location: String,
   description: String,
+  bar_camp: Boolean,
   artists: [String],
   starred_count: Number // jshint ignore:line
 });
