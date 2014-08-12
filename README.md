@@ -150,6 +150,7 @@ type can `STAGE` or `RESTAURANT`
     "artists": ["Tapani Kansa"],
     "description": "This is a stage",
     "bar_camp": "true",
+    "day": "Friday",
     "starred_count": 2
   }
 ]
