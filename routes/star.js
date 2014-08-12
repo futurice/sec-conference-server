@@ -1,4 +1,4 @@
-var redis = require('redis-url').connect(process.env.REDISCLOUD_URL)
+var redis = require('redis-url').connect(process.env.REDIS_URL)
   , Event = require('../api/models/event')
 ;
 

@@ -1,4 +1,4 @@
-var redis = require('redis-url').connect(process.env.REDISCLOUD_URL);
+var redis = require('redis-url').connect(process.env.REDIS_URL);
 
 redis.on('error', function (err) {
   console.error('Redis server cannot be reachead: ' + err);
