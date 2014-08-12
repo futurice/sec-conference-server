@@ -149,6 +149,7 @@ type can `STAGE` or `RESTAURANT`
     "_id": "53486eaaead3150200ca791e",
     "artists": ["Tapani Kansa"],
     "description": "This is a stage",
+    "bar_camp": "true",
     "starred_count": 2
   }
 ]
