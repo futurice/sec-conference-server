@@ -147,7 +147,7 @@ type can `STAGE` or `RESTAURANT`
     "end_time": "2014-04-12T12:00:00.000Z",
     "location": "Niitty",
     "_id": "53486eaaead3150200ca791e",
-    "artists": ["Tapani Kansa"],
+    "artists": "Tapani Kansa",
     "description": "This is a stage",
     "bar_camp": "true",
     "day": "Friday",
