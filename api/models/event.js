@@ -8,6 +8,8 @@ var EventSchema = new Schema({
   location: String,
   description: String,
   bar_camp: Boolean,
+  twitter_handle: String,
+  linkedin_url: String,
   day: String,
   image_url: String,
   artists: String,
