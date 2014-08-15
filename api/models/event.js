@@ -7,6 +7,7 @@ var EventSchema = new Schema({
   end_time: Date,       // jshint ignore:line
   location: String,
   description: String,
+  subheader: String,
   bar_camp: Boolean,
   twitter_handle: String,
   linkedin_url: String,
