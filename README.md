@@ -142,15 +142,20 @@ type can `STAGE` or `RESTAURANT`
 ```json
 [
   {
+    "_id": "53486eaaead3150200ca791e",
     "title": "Foo",
     "start_time": "2014-04-12T10:00:00.000Z",
     "end_time": "2014-04-12T12:00:00.000Z",
-    "location": "Niitty",
-    "_id": "53486eaaead3150200ca791e",
-    "artists": "Tapani Kansa",
-    "description": "This is a stage",
-    "bar_camp": "true",
     "day": "Friday",
+    "location": "This is the room where the event will happen",
+    "description": "Long description.",
+    "bar_camp": "true",
+    "artists": "Speaker name, or names of multiple speakers",
+    "speaker_role": "CEO at Futurice Oy",
+    "speaker_image_url": "Link to a square picture of the speaker",
+    "twitter_handle": "@bobmarley",
+    "linkedin_url": "https://linkedin.com/link/to/the/profile",
+    "image_url": "Link to a picture for this event, preferable resolution 1000x500 ",
     "starred_count": 2
   }
 ]

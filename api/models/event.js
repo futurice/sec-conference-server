@@ -7,12 +7,13 @@ var EventSchema = new Schema({
   end_time: Date,       // jshint ignore:line
   location: String,
   description: String,
-  subheader: String,
+  speaker_role: String,
   bar_camp: Boolean,
   twitter_handle: String,
   linkedin_url: String,
   day: String,
   image_url: String,
+  speaker_image_url: String,
   artists: String,
   starred_count: Number // jshint ignore:line
 });
