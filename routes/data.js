@@ -11,7 +11,7 @@ module.exports = function(app, apiVersion) {
   restify.defaults({
     outputFn: Localise.localiseApiCallResult,
     version: apiVersion,
-    private: '__v'
+    private: ['__v']
   });
 
   restify.serve(app, Artist);
