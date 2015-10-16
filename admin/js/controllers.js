@@ -295,5 +295,5 @@ myAppControllers.
 myAppControllers.
   controller('HomeCtrl', ['$scope', function ($scope) {
     $scope.hello = 'Welcome Admin!';
-    $scope.intro = 'Here you can edit your festival. Please choose the section for further actions.';
+    $scope.intro = 'Here you can edit your conference. Please choose the section above for further actions.';
   }]);
