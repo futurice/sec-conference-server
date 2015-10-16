@@ -20,7 +20,7 @@ var accessFilter = require('./lib/access_filter');
 var app = express();
 
 app.use(logger('short'));
-app.use(bodyParser());
+app.use(bodyParser.json());
 app.use('/api', accessFilter.authAPI(accounts, apiVersion));
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/admin', accessFilter.authAdminUI(accounts));
