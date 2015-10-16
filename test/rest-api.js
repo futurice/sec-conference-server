@@ -55,3 +55,14 @@ describe('GET info', function(){
       .expect(200, done);
   });
 });
+describe('POST info', function(){
+  it('does stuff', function(done){
+    request(app)
+      .post('/api/v1/info')
+      .set('Authorization', 'Basic YWRtaW46YWRtaW4=')
+      .set('Accept', 'application/json')
+      .send({title: 'Test title', image: '', content: '<p>Test content</p>', place: '7'})
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+});

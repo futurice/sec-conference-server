@@ -15,7 +15,13 @@ module.exports = function(app, apiVersion) {
   });
 
   restify.serve(app, Artist);
-  restify.serve(app, Info, { plural: false });
+  restify.serve(app, Info, {
+    plural: false,
+    contextFilter: function(model, req, cb) {
+      // Sort by creation timestamp (included in Mongo's _id field)
+      cb(model.find().sort('_id'));
+    }
+  });
   restify.serve(app, News);
   restify.serve(app, Event);
   restify.serve(app, Location);
