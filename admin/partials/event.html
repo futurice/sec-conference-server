@@ -1,4 +1,4 @@
-<div class="event" >
+<div class="container event" >
     <div class="row">
         <div class="col-md-12">
             <h3>{{event.title}}</h3>
@@ -27,6 +27,7 @@
                             <label for="start_time" class="col-md-2 control-label">Start time and date</label>
                             <div class="col-md-10">
                                 <input id="start_time" class="form-control" type="text" ng-model=event['start_time'] />
+                                <span class="help-block">The format should be 2015-12-24T14:00:00.000Z</span>
                             </div>
                         </div>
                         <!-- end_time -->
@@ -34,6 +35,7 @@
                             <label for="end_time" class="col-md-2 control-label">End time and date</label>
                             <div class="col-md-10">
                                 <input id="end_time" class="form-control" type="text" ng-model=event['end_time'] />
+                                <span class="help-block">The format should be 2015-12-24T15:00:00.000Z</span>
                             </div>
                         </div>
                         <!-- description -->
@@ -47,7 +49,10 @@
                         <div class="form-group">
                             <label for="bar_camp" class="col-md-2 control-label">Highlighted</label>
                             <div class="col-md-10">
-                                <input id="bar_camp" class="form-control" type="text" ng-model=event['bar_camp'] />
+                                <select id="bar_camp" class="form-control ng-pristine ng-valid" ng-model="event['bar_camp']">
+                                    <option class="ng-scope ng-binding" value="true">Hightlight this event</option>
+                                    <option class="ng-scope ng-binding" value="false">Don't highlight this event</option>
+                                </select>
                             </div>
                         </div>
                         <!-- image_url -->
