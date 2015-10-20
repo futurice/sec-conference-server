@@ -49,8 +49,8 @@ myAppControllers.
       Object.getOwnPropertyNames(data).forEach(function (name) {
         var type = (data[name].type) || data[name];
         if ($.isArray(data[name])) {
-	  type = '[' + type + ']';
-	}
+          type = '[' + type + ']';
+        }
         $scope.schema.push({'name': name, 'type': type});
       });
     });
@@ -102,8 +102,8 @@ myAppControllers.
       Object.getOwnPropertyNames(data).forEach(function (name) {
         var type = (data[name].type) || data[name];
         if ($.isArray(data[name])) {
-	  type = '[' + type + ']';
-	}
+          type = '[' + type + ']';
+        }
         $scope.schema.push({'name': name, 'type': type});
       });
     });
@@ -155,8 +155,8 @@ myAppControllers.
       Object.getOwnPropertyNames(data).forEach(function (name) {
         var type = (data[name].type) || data[name];
         if ($.isArray(data[name])) {
-	  type = '[' + type + ']';
-	}
+          type = '[' + type + ']';
+        }
         $scope.schema.push({'name': name, 'type': type});
       });
     });
@@ -208,8 +208,8 @@ myAppControllers.
       Object.getOwnPropertyNames(data).forEach(function (name) {
         var type = (data[name].type) || data[name];
         if ($.isArray(data[name])) {
-	  type = '[' + type + ']';
-	}
+          type = '[' + type + ']';
+        }
         $scope.schema.push({'name': name, 'type': type});
       });
     });
@@ -260,8 +260,8 @@ myAppControllers.
       Object.getOwnPropertyNames(data).forEach(function (name) {
         var type = (data[name].type) || data[name];
         if ($.isArray(data[name])) {
-	  type = '[' + type + ']';
-	}
+          type = '[' + type + ']';
+        }
         $scope.schema.push({'name': name, 'type': type});
       });
     });
@@ -285,8 +285,8 @@ myAppControllers.
       Object.getOwnPropertyNames(data).forEach(function (name) {
         var type = (data[name].type) || data[name];
         if ($.isArray(data[name])) {
-	  type = '[' + type + ']';
-	}
+          type = '[' + type + ']';
+        }
         $scope.schema.push({'name': name, 'type': type});
       });
     });
