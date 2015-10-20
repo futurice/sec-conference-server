@@ -1,6 +1,6 @@
 <div class="container event" >
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-lg-12">
             <h3>{{event.title}}</h3>
             <div class="well">
                 <form class="form-horizontal">
@@ -8,15 +8,15 @@
                     <fieldset>
                         <!-- title -->
                         <div class="form-group">
-                            <label for="title" class="col-md-2 control-label">Title</label>
-                            <div class="col-md-10">
+                            <label for="title" class="col-sm-2 control-label">Title</label>
+                            <div class="col-sm-10">
                                 <input id="title" class="form-control" type="text" ng-model=event['title'] />
                             </div>
                         </div>
                         <!-- location -->
                         <div class="form-group">
-                            <label for="location" class="col-md-2 control-label">Location</label>
-                            <div class="col-md-10">
+                            <label for="location" class="col-sm-2 control-label">Location</label>
+                            <div class="col-sm-10">
                                 <select id="location" class="form-control" ng-model="event['location']">
                                     <option ng-repeat="location in locations">{{location.name}}</option>
                                 </select>
@@ -24,31 +24,31 @@
                         </div>
                         <!-- start_time -->
                         <div class="form-group">
-                            <label for="start_time" class="col-md-2 control-label">Start time and date</label>
-                            <div class="col-md-10">
+                            <label for="start_time" class="col-sm-2 control-label">Start time and date</label>
+                            <div class="col-sm-10">
                                 <input id="start_time" class="form-control" type="text" ng-model=event['start_time'] />
                                 <span class="help-block">The format should be 2015-12-24T14:00:00.000Z</span>
                             </div>
                         </div>
                         <!-- end_time -->
                         <div class="form-group">
-                            <label for="end_time" class="col-md-2 control-label">End time and date</label>
-                            <div class="col-md-10">
+                            <label for="end_time" class="col-sm-2 control-label">End time and date</label>
+                            <div class="col-sm-10">
                                 <input id="end_time" class="form-control" type="text" ng-model=event['end_time'] />
                                 <span class="help-block">The format should be 2015-12-24T15:00:00.000Z</span>
                             </div>
                         </div>
                         <!-- description -->
                         <div class="form-group">
-                            <label for="description" class="col-md-2 control-label">Description</label>
-                            <div class="col-md-10">
+                            <label for="description" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-10">
                                 <textarea id="description" class="form-control" rows="3" ng-model=event['description']></textarea>
                             </div>
                         </div>
                         <!-- bar_camp -->
                         <div class="form-group">
-                            <label for="bar_camp" class="col-md-2 control-label">Highlighted</label>
-                            <div class="col-md-10">
+                            <label for="bar_camp" class="col-sm-2 control-label">Highlighted</label>
+                            <div class="col-sm-10">
                                 <select id="bar_camp" class="form-control ng-pristine ng-valid" ng-model="event['bar_camp']">
                                     <option class="ng-scope ng-binding" value="true">Hightlight this event</option>
                                     <option class="ng-scope ng-binding" value="false">Don't highlight this event</option>
@@ -57,8 +57,8 @@
                         </div>
                         <!-- image_url -->
                         <div class="form-group">
-                            <label for="image_url" class="col-md-2 control-label">Image URL</label>
-                            <div class="col-md-10">
+                            <label for="image_url" class="col-sm-2 control-label">Image URL</label>
+                            <div class="col-sm-10">
                                 <input id="image_url" class="form-control" type="text" ng-model=event['image_url'] />
                             </div>
                         </div>
@@ -67,36 +67,36 @@
                     <fieldset>
                         <!-- artists -->
                         <div class="form-group">
-                            <label for="artists" class="col-md-2 control-label">Name</label>
-                            <div class="col-md-10">
+                            <label for="artists" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
                                 <input id="artists" class="form-control" type="text" ng-model=event['artists'] />
                             </div>
                         </div>
                         <!-- speaker_role -->
                         <div class="form-group">
-                            <label for="speaker_role" class="col-md-2 control-label">Role</label>
-                            <div class="col-md-10">
+                            <label for="speaker_role" class="col-sm-2 control-label">Role</label>
+                            <div class="col-sm-10">
                                 <input id="speaker_role" class="form-control" type="text" ng-model=event['speaker_role'] />
                             </div>
                         </div>
                         <!-- speaker_image_url -->
                         <div class="form-group">
-                            <label for="speaker_image_url" class="col-md-2 control-label">Image URL</label>
-                            <div class="col-md-10">
+                            <label for="speaker_image_url" class="col-sm-2 control-label">Image URL</label>
+                            <div class="col-sm-10">
                                 <input id="speaker_image_url" class="form-control" type="text" ng-model=event['speaker_image_url'] />
                             </div>
                         </div>
                         <!-- twitter_handle -->
                         <div class="form-group">
-                            <label for="twitter_handle" class="col-md-2 control-label">Twitter handle</label>
-                            <div class="col-md-10">
+                            <label for="twitter_handle" class="col-sm-2 control-label">Twitter handle</label>
+                            <div class="col-sm-10">
                                 <input id="twitter_handle" class="form-control" type="text" ng-model=event['twitter_handle'] />
                             </div>
                         </div>
                         <!-- linkedin_url -->
                         <div class="form-group">
-                            <label for="linkedin_url" class="col-md-2 control-label">Linkedin URL</label>
-                            <div class="col-md-10">
+                            <label for="linkedin_url" class="col-sm-2 control-label">Linkedin URL</label>
+                            <div class="col-sm-10">
                                 <input id="linkedin_url" class="form-control" type="text" ng-model=event['linkedin_url'] />
                             </div>
                         </div>
@@ -105,36 +105,36 @@
                     <fieldset>
                         <!-- artists_2 -->
                         <div class="form-group">
-                            <label for="artists_2" class="col-md-2 control-label">Name</label>
-                            <div class="col-md-10">
+                            <label for="artists_2" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
                                 <input id="artists_2" class="form-control" type="text" ng-model=event['artists_2'] />
                             </div>
                         </div>
                         <!-- speaker_role_2 -->
                         <div class="form-group">
-                            <label for="speaker_role_2" class="col-md-2 control-label">Role</label>
-                            <div class="col-md-10">
+                            <label for="speaker_role_2" class="col-sm-2 control-label">Role</label>
+                            <div class="col-sm-10">
                                 <input id="speaker_role_2" class="form-control" type="text" ng-model=event['speaker_role_2'] />
                             </div>
                         </div>
                         <!-- speaker_image_url_2 -->
                         <div class="form-group">
-                            <label for="speaker_image_url_2" class="col-md-2 control-label">Image URL</label>
-                            <div class="col-md-10">
+                            <label for="speaker_image_url_2" class="col-sm-2 control-label">Image URL</label>
+                            <div class="col-sm-10">
                                 <input id="speaker_image_url_2" class="form-control" type="text" ng-model=event['speaker_image_url_2'] />
                             </div>
                         </div>
                         <!-- twitter_handle_2 -->
                         <div class="form-group">
-                            <label for="twitter_handle_2" class="col-md-2 control-label">Twitter handle</label>
-                            <div class="col-md-10">
+                            <label for="twitter_handle_2" class="col-sm-2 control-label">Twitter handle</label>
+                            <div class="col-sm-10">
                                 <input id="twitter_handle_2" class="form-control" type="text" ng-model=event['twitter_handle_2'] />
                             </div>
                         </div>
                         <!-- linkedin_url_2 -->
                         <div class="form-group">
-                            <label for="linkedin_url" class="col-md-2 control-label">Linkedin URL</label>
-                            <div class="col-md-10">
+                            <label for="linkedin_url" class="col-sm-2 control-label">Linkedin URL</label>
+                            <div class="col-sm-10">
                                 <input id="linkedin_url_2" class="form-control" type="text" ng-model=event['linkedin_url_2'] />
                             </div>
                         </div>
@@ -143,36 +143,36 @@
                     <fieldset>
                         <!-- artists_3 -->
                         <div class="form-group">
-                            <label for="artists_3" class="col-md-2 control-label">Name</label>
-                            <div class="col-md-10">
+                            <label for="artists_3" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
                                 <input id="artists_3" class="form-control" type="text" ng-model=event['artists_3'] />
                             </div>
                         </div>
                         <!-- speaker_role_3 -->
                         <div class="form-group">
-                            <label for="speaker_role_3" class="col-md-2 control-label">Role</label>
-                            <div class="col-md-10">
+                            <label for="speaker_role_3" class="col-sm-2 control-label">Role</label>
+                            <div class="col-sm-10">
                                 <input id="speaker_role_3" class="form-control" type="text" ng-model=event['speaker_role_3'] />
                             </div>
                         </div>
                         <!-- speaker_image_url_3 -->
                         <div class="form-group">
-                            <label for="speaker_image_url_3" class="col-md-2 control-label">Image URL</label>
-                            <div class="col-md-10">
+                            <label for="speaker_image_url_3" class="col-sm-2 control-label">Image URL</label>
+                            <div class="col-sm-10">
                                 <input id="speaker_image_url_3" class="form-control" type="text" ng-model=event['speaker_image_url_3'] />
                             </div>
                         </div>
                         <!-- twitter_handle_3 -->
                         <div class="form-group">
-                            <label for="twitter_handle_3" class="col-md-2 control-label">Twitter handle</label>
-                            <div class="col-md-10">
+                            <label for="twitter_handle_3" class="col-sm-2 control-label">Twitter handle</label>
+                            <div class="col-sm-10">
                                 <input id="twitter_handle_3" class="form-control" type="text" ng-model=event['twitter_handle_3'] />
                             </div>
                         </div>
                         <!-- linkedin_url_3 -->
                         <div class="form-group">
-                            <label for="linkedin_url_3" class="col-md-2 control-label">Linkedin URL</label>
-                            <div class="col-md-10">
+                            <label for="linkedin_url_3" class="col-sm-2 control-label">Linkedin URL</label>
+                            <div class="col-sm-10">
                                 <input id="linkedin_url_3" class="form-control" type="text" ng-model=event['linkedin_url_3'] />
                             </div>
                         </div>
