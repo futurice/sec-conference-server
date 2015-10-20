@@ -1,4 +1,4 @@
-<div class="event" >
+<div class="container event" >
     <div class="row">
         <div class="col-md-12">
             <h3>{{event.title}}</h3>
@@ -49,7 +49,10 @@
                         <div class="form-group">
                             <label for="bar_camp" class="col-md-2 control-label">Highlighted</label>
                             <div class="col-md-10">
-                                <input id="bar_camp" class="form-control" type="text" ng-model=event['bar_camp'] />
+                                <select id="bar_camp" class="form-control ng-pristine ng-valid" ng-model="event['bar_camp']">
+                                    <option class="ng-scope ng-binding" value="true">Hightlight this event</option>
+                                    <option class="ng-scope ng-binding" value="false">Don't highlight this event</option>
+                                </select>
                             </div>
                         </div>
                         <!-- image_url -->
