@@ -18,13 +18,13 @@ var EventSchema = new Schema({
   twitter_handle: String, // jshint ignore:line
   linkedin_url: String,  // jshint ignore:line
   // 2nd speaker
-  artists_2: String,
+  artists_2: String, // jshint ignore:line
   speaker_role_2: String, // jshint ignore:line
   speaker_image_url_2: String, // jshint ignore:line
   twitter_handle_2: String, // jshint ignore:line
   linkedin_url_2: String,  // jshint ignore:line
   // 3rd speaker
-  artists_3: String,
+  artists_3: String, // jshint ignore:line
   speaker_role_3: String, // jshint ignore:line
   speaker_image_url_3: String, // jshint ignore:line
   twitter_handle_3: String, // jshint ignore:line
