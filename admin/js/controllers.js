@@ -85,10 +85,14 @@ myAppControllers.
   }]);
 
 myAppControllers.
-  controller('EventCtrl', ['$scope', '$routeParams', '$location', 'Event', '$http', function ($scope, $routeParams, $location, Event, $http) {
+  controller('EventCtrl', ['$scope', '$routeParams', '$location', 'Event', 'Locations', '$http', function ($scope, $routeParams, $location, Event, Locations, $http) {
 
     Event.get({eventId: $routeParams.eventId}, function (event) {
       $scope.event = event;
+    });
+
+    Locations.get({}, function (locations) {
+      $scope.locations = locations;
     });
 
     $scope.saveEvent = function () {

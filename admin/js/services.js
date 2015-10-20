@@ -28,6 +28,11 @@ myAppServices.factory('Location', ['$resource',
     return $resource('../api/v1/locations/:locationId', {locationId: '@id'}, {update: {method: 'PUT'}});
   }]);
 
+myAppServices.factory('Locations', ['$resource',
+  function ($resource) {
+    return $resource('../api/v1/locations', {}, {get: {isArray: true}});
+  }]);
+
 myAppServices.factory('Info', ['$resource',
   function ($resource) {
     return $resource('../api/v1/info/:infoItemId', {infoItemId: '@id'}, {update: {method: 'PUT'}});

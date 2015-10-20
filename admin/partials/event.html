@@ -17,7 +17,9 @@
                         <div class="form-group">
                             <label for="location" class="col-md-2 control-label">Location</label>
                             <div class="col-md-10">
-                                <input id="location" class="form-control" type="text" ng-model=event['location'] />
+                                <select id="location" class="form-control" ng-model="event['location']">
+                                    <option ng-repeat="location in locations">{{location.name}}</option>
+                                </select>
                             </div>
                         </div>
                         <!-- start_time -->
