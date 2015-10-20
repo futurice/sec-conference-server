@@ -1,29 +1,182 @@
 <div class="event" >
-    <h3>{{event.title}}</h3>
-    <form>
-        <div ng-repeat="field in schema">
-            <div ng-switch on="field.type">
-                <div ng-switch-when="String">
-                    <input type="text" ng-model=event[field.name] /> {{field.name}}
-                </div>
-                <div ng-switch-when="Date">
-                    <div class="input-append date" onload="$(this).datetimepicker({language: 'pt-BR'});">
-                        <input data-format="dd/MM/yyyy hh:mm:ss" type="text" ng-model=event[field.name] />{{field.name}}
-                    <span class="add-on">
-                      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                      </i>
-                    </span>
-                    </div>
-                </div>
-                <div ng-switch-default>
-                    <input type="text" ng-model=event[field.name] /> {{field.name}}
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>{{event.title}}</h3>
+            <div class="well">
+                <form class="form-horizontal">
+                    <legend>Event</legend>
+                    <fieldset>
+                        <!-- title -->
+                        <div class="form-group">
+                            <label for="title" class="col-md-2 control-label">Title</label>
+                            <div class="col-md-10">
+                                <input id="title" class="form-control" type="text" ng-model=event['title'] />
+                            </div>
+                        </div>
+                        <!-- location -->
+                        <div class="form-group">
+                            <label for="location" class="col-md-2 control-label">Location</label>
+                            <div class="col-md-10">
+                                <input id="location" class="form-control" type="text" ng-model=event['location'] />
+                            </div>
+                        </div>
+                        <!-- start_time -->
+                        <div class="form-group">
+                            <label for="start_time" class="col-md-2 control-label">Start time and date</label>
+                            <div class="col-md-10">
+                                <input id="start_time" class="form-control" type="text" ng-model=event['start_time'] />
+                            </div>
+                        </div>
+                        <!-- end_time -->
+                        <div class="form-group">
+                            <label for="end_time" class="col-md-2 control-label">End time and date</label>
+                            <div class="col-md-10">
+                                <input id="end_time" class="form-control" type="text" ng-model=event['end_time'] />
+                            </div>
+                        </div>
+                        <!-- description -->
+                        <div class="form-group">
+                            <label for="description" class="col-md-2 control-label">Description</label>
+                            <div class="col-md-10">
+                                <input id="description" class="form-control" type="text" ng-model=event['description'] />
+                            </div>
+                        </div>
+                        <!-- bar_camp -->
+                        <div class="form-group">
+                            <label for="bar_camp" class="col-md-2 control-label">Highlighted</label>
+                            <div class="col-md-10">
+                                <input id="bar_camp" class="form-control" type="text" ng-model=event['bar_camp'] />
+                            </div>
+                        </div>
+                        <!-- image_url -->
+                        <div class="form-group">
+                            <label for="image_url" class="col-md-2 control-label">Image URL</label>
+                            <div class="col-md-10">
+                                <input id="image_url" class="form-control" type="text" ng-model=event['image_url'] />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <legend>Speaker 1</legend>
+                    <fieldset>
+                        <!-- artists -->
+                        <div class="form-group">
+                            <label for="artists" class="col-md-2 control-label">Name</label>
+                            <div class="col-md-10">
+                                <input id="artists" class="form-control" type="text" ng-model=event['artists'] />
+                            </div>
+                        </div>
+                        <!-- speaker_role -->
+                        <div class="form-group">
+                            <label for="speaker_role" class="col-md-2 control-label">Role</label>
+                            <div class="col-md-10">
+                                <input id="speaker_role" class="form-control" type="text" ng-model=event['speaker_role'] />
+                            </div>
+                        </div>
+                        <!-- speaker_image_url -->
+                        <div class="form-group">
+                            <label for="speaker_image_url" class="col-md-2 control-label">Image URL</label>
+                            <div class="col-md-10">
+                                <input id="speaker_image_url" class="form-control" type="text" ng-model=event['speaker_image_url'] />
+                            </div>
+                        </div>
+                        <!-- twitter_handle -->
+                        <div class="form-group">
+                            <label for="twitter_handle" class="col-md-2 control-label">Twitter handle</label>
+                            <div class="col-md-10">
+                                <input id="twitter_handle" class="form-control" type="text" ng-model=event['twitter_handle'] />
+                            </div>
+                        </div>
+                        <!-- linkedin_url -->
+                        <div class="form-group">
+                            <label for="linkedin_url" class="col-md-2 control-label">Linkedin URL</label>
+                            <div class="col-md-10">
+                                <input id="linkedin_url" class="form-control" type="text" ng-model=event['linkedin_url'] />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <legend>Speaker 2</legend>
+                    <fieldset>
+                        <!-- artists_2 -->
+                        <div class="form-group">
+                            <label for="artists_2" class="col-md-2 control-label">Name</label>
+                            <div class="col-md-10">
+                                <input id="artists_2" class="form-control" type="text" ng-model=event['artists_2'] />
+                            </div>
+                        </div>
+                        <!-- speaker_role_2 -->
+                        <div class="form-group">
+                            <label for="speaker_role_2" class="col-md-2 control-label">Role</label>
+                            <div class="col-md-10">
+                                <input id="speaker_role_2" class="form-control" type="text" ng-model=event['speaker_role_2'] />
+                            </div>
+                        </div>
+                        <!-- speaker_image_url_2 -->
+                        <div class="form-group">
+                            <label for="speaker_image_url_2" class="col-md-2 control-label">Image URL</label>
+                            <div class="col-md-10">
+                                <input id="speaker_image_url_2" class="form-control" type="text" ng-model=event['speaker_image_url_2'] />
+                            </div>
+                        </div>
+                        <!-- twitter_handle_2 -->
+                        <div class="form-group">
+                            <label for="twitter_handle_2" class="col-md-2 control-label">Twitter handle</label>
+                            <div class="col-md-10">
+                                <input id="twitter_handle_2" class="form-control" type="text" ng-model=event['twitter_handle_2'] />
+                            </div>
+                        </div>
+                        <!-- linkedin_url_2 -->
+                        <div class="form-group">
+                            <label for="linkedin_url" class="col-md-2 control-label">Linkedin URL</label>
+                            <div class="col-md-10">
+                                <input id="linkedin_url_2" class="form-control" type="text" ng-model=event['linkedin_url_2'] />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <legend>Speaker 3</legend>
+                    <fieldset>
+                        <!-- artists_3 -->
+                        <div class="form-group">
+                            <label for="artists_3" class="col-md-2 control-label">Name</label>
+                            <div class="col-md-10">
+                                <input id="artists_3" class="form-control" type="text" ng-model=event['artists_3'] />
+                            </div>
+                        </div>
+                        <!-- speaker_role_3 -->
+                        <div class="form-group">
+                            <label for="speaker_role_3" class="col-md-2 control-label">Role</label>
+                            <div class="col-md-10">
+                                <input id="speaker_role_3" class="form-control" type="text" ng-model=event['speaker_role_3'] />
+                            </div>
+                        </div>
+                        <!-- speaker_image_url_3 -->
+                        <div class="form-group">
+                            <label for="speaker_image_url_3" class="col-md-2 control-label">Image URL</label>
+                            <div class="col-md-10">
+                                <input id="speaker_image_url_3" class="form-control" type="text" ng-model=event['speaker_image_url_3'] />
+                            </div>
+                        </div>
+                        <!-- twitter_handle_3 -->
+                        <div class="form-group">
+                            <label for="twitter_handle_3" class="col-md-2 control-label">Twitter handle</label>
+                            <div class="col-md-10">
+                                <input id="twitter_handle_3" class="form-control" type="text" ng-model=event['twitter_handle_3'] />
+                            </div>
+                        </div>
+                        <!-- linkedin_url_3 -->
+                        <div class="form-group">
+                            <label for="linkedin_url_3" class="col-md-2 control-label">Linkedin URL</label>
+                            <div class="col-md-10">
+                                <input id="linkedin_url_3" class="form-control" type="text" ng-model=event['linkedin_url_3'] />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <p class="formSubmit">
+                        <button type="submit" class="btn btn-primary" value="Save" ng-click="saveEvent()">Save</button>
+                    </p>
+                </form>
             </div>
         </div>
-        <p class="formSubmit">
-        <input type="submit" value="Save" ng-click="saveEvent()"/>
-        </p>
-    </form>
+    </div>
     <div class="json">
         <h4>Raw JSON:</h4>
         <textarea class="json">{{event}}</textarea>
