@@ -77,3 +77,8 @@ table.listing tr td {
     border-bottom-style: dashed;
     border-bottom-width: 1px;
 }
+
+pre {
+    border: none;
+    background: none;
+}
