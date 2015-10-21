@@ -3,12 +3,28 @@ sec-conference-server
 
 **Forked from [festapp-server](https://github.com/futurice/festapp-server)**
 
+## Getting started
+
 * Install MongoDB and Redis.
 * Install dependencies: `npm install`
-* When developing locally: `npm run import-data`
-* Run the project: `npm start`
+* When developing locally, import mock data: `npm run import-data`
+* Run the server: `npm start`
 
-The server listens in port 8080 by default. The port can be changed by setting environment variable PORT.
+## Configuration
+
+The server is configurable via environment variables:
+
+* `PORT`: the port the server listens on, default `8080`
+* `MONGOLAB_URI`: the MongoDB connection URL, default `mongodb://localhost/festapp-dev`
+* `REDIS_URL`: the Redis connection URL, default `redis://localhost:6379`
+* `ADMIN_PASSWORD`: the password for the admin panel, default `admin`. The username is always `admin`.
+
+For example, if you have MongoDB and Redis running locally in [Docker](https://www.docker.com/), and your Docker host IP
+is 192.168.59.103, you can run your server like so:
+
+```
+MONGOLAB_URI=mongodb://192.168.59.103:27017/festapp-dev REDIS_URL=redis://192.168.59.103:6379 npm start
+```
 
 ## Admin panel
 
