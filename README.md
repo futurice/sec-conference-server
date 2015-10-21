@@ -5,7 +5,7 @@ sec-conference-server
 
 * Install MongoDB and Redis.
 * Install dependencies: `npm install`
-* When developing locally: `node import-data.js`
+* When developing locally: `npm run import-data`
 * Run the project: `npm start`
 
 The server listens in port 8080 by default. The port can be changed by setting environment variable PORT.
