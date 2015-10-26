@@ -1,31 +1,72 @@
-<div class="location" >
-    <h3>{{location.name}}</h3>
-    <form>
-        <div ng-repeat="field in schema">
-            <div ng-switch on="field.type">
-                <div ng-switch-when="String">
-                    <input type="text" ng-model=location[field.name] /> {{field.name}}
-                </div>
-                <div ng-switch-when="Date">
-                    <div class="input-append date" onload="$(this).datetimepicker({language: 'pt-BR'});">
-                        <input data-format="dd/MM/yyyy hh:mm:ss" type="text" ng-model=location[field.name] />{{field.name}}
-                    <span class="add-on">
-                      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                      </i>
-                    </span>
-                    </div>
-                </div>
-                <div ng-switch-default>
-                    <input type="text" ng-model=location[field.name] /> {{field.name}}
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>{{location.name}}</h3>
+            <div class="well">
+                <form class="form-horizontal">
+                    <legend>Location</legend>
+                    <fieldset>
+                        <!-- name -->
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input id="name" class="form-control" type="text" ng-model=location['name'] />
+                            </div>
+                        </div>
+                        <!-- x -->
+                        <div class="form-group">
+                            <label for="x" class="col-sm-2 control-label">X</label>
+                            <div class="col-sm-10">
+                                <input id="x" class="form-control" type="text" ng-model=location['x'] />
+                            </div>
+                        </div>
+                        <!-- y -->
+                        <div class="form-group">
+                            <label for="y" class="col-sm-2 control-label">Y</label>
+                            <div class="col-sm-10">
+                                <input id="y" class="form-control" type="text" ng-model=location['y'] />
+                            </div>
+                        </div>
+                        <!-- width -->
+                        <div class="form-group">
+                            <label for="width" class="col-sm-2 control-label">Width</label>
+                            <div class="col-sm-10">
+                                <input id="width" class="form-control" type="text" ng-model=location['width'] />
+                            </div>
+                        </div>
+                        <!-- height -->
+                        <div class="form-group">
+                            <label for="height" class="col-sm-2 control-label">Height</label>
+                            <div class="col-sm-10">
+                                <input id="height" class="form-control" type="text" ng-model=location['height'] />
+                            </div>
+                        </div>
+                        <!-- type -->
+                        <div class="form-group">
+                            <label for="type" class="col-sm-2 control-label">Type</label>
+                            <div class="col-sm-10">
+                                <input id="type" class="form-control" type="text" ng-model=location['type'] />
+                            </div>
+                        </div>
+                        <!-- description -->
+                        <div class="form-group">
+                            <label for="description" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-10">
+                                <textarea id="description" class="form-control" rows="3" ng-model=location['description']></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <p class="formSubmit">
+                        <button type="submit" class="btn btn-primary" value="Save" ng-click="saveLocation()">Save</button>
+                    </p>
+                </form>
             </div>
         </div>
-        <p class="formSubmit">
-        <input type="submit" value="Save" ng-click="saveLocation()"/>
-        </p>
-    </form>
-    <div class="json">
-        <h4>Raw JSON:</h4>
-        <textarea class="json">{{location}}</textarea>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Raw JSON</div>
+        <div class="panel-body">
+            <pre><code>{{location | json}}</code></pre>
+        </div>
     </div>
 </div>

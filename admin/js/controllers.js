@@ -89,7 +89,6 @@ myAppControllers.
 
     Event.get({eventId: $routeParams.eventId}, function (event) {
       $scope.event = event;
-      $scope.rawJSON = JSON.stringify(event, null, 2);
     });
 
     Locations.get({}, function (locations) {

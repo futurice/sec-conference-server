@@ -1,4 +1,4 @@
-<div class="container event" >
+<div class="container event">
     <div class="row">
         <div class="col-lg-12">
             <h3>{{event.title}}</h3>
@@ -57,7 +57,9 @@
                         <div class="form-group">
                             <label for="bar_camp" class="col-sm-2 control-label">Highlighted</label>
                             <div class="col-sm-10">
-                                <select id="bar_camp" class="form-control" ng-model=event['bar_camp'] ng-options="option as option for option in ['var1', 'var2', 'var3']" />
+                                <div class="checkbox-inline">
+                                    <input id="bar_camp" type="checkbox" ng-model="event['bar_camp']" />
+                                </div>
                             </div>
                         </div>
                         <!-- image_url -->
@@ -192,7 +194,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Raw JSON</div>
         <div class="panel-body">
-            <pre><code>{{rawJSON}}</code></pre>
+            <pre><code>{{event | json}}</code></pre>
         </div>
     </div>
 </div>

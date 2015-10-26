@@ -3,12 +3,28 @@ sec-conference-server
 
 **Forked from [festapp-server](https://github.com/futurice/festapp-server)**
 
+## Getting started
+
 * Install MongoDB and Redis.
 * Install dependencies: `npm install`
-* When developing locally: `node import-data.js`
-* Run the project: `npm start`
+* When developing locally, import mock data: `npm run import-data`
+* Run the server: `npm start`
 
-The server listens in port 8080 by default. The port can be changed by setting environment variable PORT.
+## Configuration
+
+The server is configurable via environment variables:
+
+* `PORT`: the port the server listens on, default `8080`
+* `MONGOLAB_URI`: the MongoDB connection URL, default `mongodb://localhost/festapp-dev`
+* `REDIS_URL`: the Redis connection URL, default `redis://localhost:6379`
+* `ADMIN_PASSWORD`: the password for the admin panel, default `admin`. The username is always `admin`.
+
+For example, if you have MongoDB and Redis running locally in [Docker](https://www.docker.com/), and your Docker host IP
+is 192.168.59.103, you can run your server like so:
+
+```
+MONGOLAB_URI=mongodb://192.168.59.103:27017/festapp-dev REDIS_URL=redis://192.168.59.103:6379 npm start
+```
 
 ## Admin panel
 
@@ -150,11 +166,21 @@ type can `STAGE` or `RESTAURANT`
     "location": "This is the room where the event will happen",
     "description": "Long description.",
     "bar_camp": "true",
-    "artists": "Speaker name, or names of multiple speakers",
+    "artists": "Speaker name",
     "speaker_role": "CEO at Futurice Oy",
     "speaker_image_url": "Link to a square picture of the speaker",
     "twitter_handle": "@bobmarley",
     "linkedin_url": "https://linkedin.com/link/to/the/profile",
+    "artists_2": "Second speaker name",
+    "speaker_role_2": "CTO at Futurice Oy",
+    "speaker_image_url_2": "Link to a square picture of the speaker",
+    "twitter_handle_2": "@stevemarley",
+    "linkedin_url_2": "https://linkedin.com/link/to/the/profile",
+    "artists_3": "Third speaker name",
+    "speaker_role_3": "CIO at Futurice Oy",
+    "speaker_image_url_3": "Link to a square picture of the speaker",
+    "twitter_handle_3": "@jerrymarley",
+    "linkedin_url_3": "https://linkedin.com/link/to/the/profile",
     "image_url": "Link to a picture for this event, preferable resolution 1000x500 ",
     "starred_count": 2
   }

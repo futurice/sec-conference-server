@@ -1,31 +1,51 @@
-<h3>{{infoItem.title}}</h3>
-
-<form>
-    <div ng-repeat="field in schema">
-        <div ng-switch on="field.type">
-            <div ng-switch-when="String">
-                <input type="text" ng-model=infoItem[field.name] /> {{field.name}}
-            </div>
-            <div ng-switch-when="Date">
-                <div class="input-append date" onload="$(this).datetimepicker({language: 'pt-BR'});">
-                    <input data-format="dd/MM/yyyy hh:mm:ss" type="text" ng-model=infoItem[field.name] />{{field.name}}
-                    <span class="add-on">
-                      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                      </i>
-                    </span>
-                </div>
-            </div>
-            <div ng-switch-default>
-                <input type="text" ng-model=infoItem[field.name] /> {{field.name}}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>{{infoItem.title}}</h3>
+            <div class="well">
+                <form class="form-horizontal">
+                    <legend>Info</legend>
+                    <fieldset>
+                        <!-- title -->
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">Title</label>
+                            <div class="col-sm-10">
+                                <input id="title" class="form-control" type="text" ng-model=infoItem['title'] />
+                            </div>
+                        </div>
+                        <!-- image_url -->
+                        <div class="form-group">
+                            <label for="image" class="col-sm-2 control-label">Image URL</label>
+                            <div class="col-sm-10">
+                                <input id="image" class="form-control" type="text" ng-model=infoItem['image'] />
+                            </div>
+                        </div>
+                        <!-- content -->
+                        <div class="form-group">
+                            <label for="content" class="col-sm-2 control-label">Content</label>
+                            <div class="col-sm-10">
+                                <textarea id="content" class="form-control" rows="3" ng-model=infoItem['content']></textarea>
+                            </div>
+                        </div>
+                        <!-- place -->
+                        <div class="form-group">
+                            <label for="place" class="col-sm-2 control-label">Place</label>
+                            <div class="col-sm-10">
+                                <input id="place" class="form-control" type="text" ng-model=infoItem['place'] />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <p class="formSubmit">
+                        <button type="submit" class="btn btn-primary" value="Save" ng-click="saveInfo()">Save</button>
+                    </p>
+                </form>
             </div>
         </div>
     </div>
-    <p class="formSubmit">
-    <input type="submit" value="Save" ng-click="saveInfo()"/>
-    </p>
-</form>
-
-<div class="json">
-    <h4>Raw JSON:</h4>
-    <textarea class="json">{{infoItem}}</textarea>
+    <div class="panel panel-default">
+        <div class="panel-heading">Raw JSON</div>
+        <div class="panel-body">
+            <pre><code>{{infoItem | json}}</code></pre>
+        </div>
+    </div>
 </div>

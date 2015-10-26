@@ -6,6 +6,7 @@
   "scripts": {
     "test": "gulp lint && mocha",
     "start": "node server.js",
+    "import-data": "node import-data.js",
     "update-webdriver": "webdriver-manager update"
   },
   "repository": {
