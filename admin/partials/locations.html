@@ -7,7 +7,7 @@
     <table class="listing">
         <tr ng-repeat="location in locations" class="locationPick">
             <td><input type="button" value="Delete" class="btn btn-danger btn-sm" ng-click="deleteLocation(location._id)"/></td>
-            <td><a href="#/location/{{location._id}}">{{location.name}}</a></td>
+            <td><a href="#/location/{{location._id}}">{{location.name | name}}</a></td>
         </tr>
     </table>
 </div>

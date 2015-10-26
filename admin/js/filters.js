@@ -7,4 +7,14 @@ angular.module('myApp.filters', []).
     return function (text) {
       return String(text).replace(/\%VERSION\%/mg, version);
     };
-  }]);
+  }]).
+  filter('title', function () {
+    return function (title) {
+      return title || '<UNTITLED>';
+    };
+  }).
+  filter('name', function () {
+    return function (name) {
+      return name || '<UNNAMED>';
+    };
+  });
