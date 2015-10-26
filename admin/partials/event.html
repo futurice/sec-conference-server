@@ -27,7 +27,7 @@
                             <label for="start_time" class="col-sm-2 control-label">Start time and date</label>
                             <div class="col-sm-10">
                                 <input id="start_time" class="form-control" type="text" ng-model=event['start_time'] />
-                                <span class="help-block">The format should be 2015-12-24T14:00:00.000Z</span>
+                                <span class="help-block">The format should be '2015-12-24T14:00:00.000Z'</span>
                             </div>
                         </div>
                         <!-- end_time -->
@@ -35,7 +35,15 @@
                             <label for="end_time" class="col-sm-2 control-label">End time and date</label>
                             <div class="col-sm-10">
                                 <input id="end_time" class="form-control" type="text" ng-model=event['end_time'] />
-                                <span class="help-block">The format should be 2015-12-24T15:00:00.000Z</span>
+                                <span class="help-block">The format should be '2015-12-24T15:00:00.000Z'</span>
+                            </div>
+                        </div>
+                        <!-- day -->
+                        <div class="form-group">
+                            <label for="day" class="col-sm-2 control-label">Day</label>
+                            <div class="col-sm-10">
+                                <input id="day" class="form-control" type="text" ng-model=event['day'] />
+                                <span class="help-block">This should be the day of week in English like 'Saturday'</span>
                             </div>
                         </div>
                         <!-- description -->
@@ -49,10 +57,7 @@
                         <div class="form-group">
                             <label for="bar_camp" class="col-sm-2 control-label">Highlighted</label>
                             <div class="col-sm-10">
-                                <select id="bar_camp" class="form-control ng-pristine ng-valid" ng-model="event['bar_camp']">
-                                    <option class="ng-scope ng-binding" value="true">Hightlight this event</option>
-                                    <option class="ng-scope ng-binding" value="false">Don't highlight this event</option>
-                                </select>
+                                <select id="bar_camp" class="form-control" ng-model=event['bar_camp'] ng-options="option as option for option in ['var1', 'var2', 'var3']" />
                             </div>
                         </div>
                         <!-- image_url -->
