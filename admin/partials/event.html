@@ -24,18 +24,30 @@
                         </div>
                         <!-- start_time -->
                         <div class="form-group">
-                            <label for="start_time" class="col-sm-2 control-label">Start time and date</label>
+                            <label id="start_time_label" for="start_time" class="col-sm-2 control-label">Start time and date</label>
                             <div class="col-sm-10">
-                                <input id="start_time" class="form-control" type="text" ng-model=event['start_time'] />
-                                <span class="help-block">The format should be '2015-12-24T14:00:00.000Z'</span>
+                                <a class="dropdown-toggle" id="start_time_dropdown" role="button" data-toggle="dropdown" data-target="#">
+                                    <div class="input-group"><input id="start_time" type="text" class="form-control" data-ng-model="event['start_time']">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="start_time_label">
+                                    <datetimepicker data-ng-model="event['start_time']" data-datetimepicker-config="{ dropdownSelector: '#start_time_dropdown' }"/>
+                                </ul>
                             </div>
                         </div>
                         <!-- end_time -->
                         <div class="form-group">
-                            <label for="end_time" class="col-sm-2 control-label">End time and date</label>
+                            <label id="end_time_label" for="end_time" class="col-sm-2 control-label">End time and date</label>
                             <div class="col-sm-10">
-                                <input id="end_time" class="form-control" type="text" ng-model=event['end_time'] />
-                                <span class="help-block">The format should be '2015-12-24T15:00:00.000Z'</span>
+                                <a class="dropdown-toggle" id="end_time_dropdown" role="button" data-toggle="dropdown" data-target="#">
+                                    <div class="input-group"><input id="end_time" type="text" class="form-control" data-ng-model="event['end_time']">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="end_time_label">
+                                    <datetimepicker data-ng-model="event['end_time']" data-datetimepicker-config="{ dropdownSelector: '#end_time_dropdown' }"/>
+                                </ul>
                             </div>
                         </div>
                         <!-- day -->

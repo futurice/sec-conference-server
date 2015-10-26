@@ -88,6 +88,12 @@ myAppControllers.
   controller('EventCtrl', ['$scope', '$routeParams', '$location', 'Event', 'Locations', '$http', function ($scope, $routeParams, $location, Event, Locations, $http) {
 
     Event.get({eventId: $routeParams.eventId}, function (event) {
+      var renderDate = function (dateStr) {
+        return dateStr ? new Date(dateStr) : dateStr;
+      };
+
+      event.start_time = renderDate(event.start_time); // jshint ignore:line
+      event.end_time = renderDate(event.end_time); // jshint ignore:line
       $scope.event = event;
     });
 
