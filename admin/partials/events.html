@@ -12,6 +12,7 @@
               <th>Day</th>
               <th>Start</th>
               <th>End</th>
+              <th>Image URL</th>
               <th>Description</th>
           </tr>
       </thead>
@@ -23,6 +24,7 @@
               <td>{{event.day}}</td>
               <td>{{event.start_time | date : 'd MMM y HH:mm'}}</td>
               <td>{{event.end_time | date : 'd MMM y HH:mm'}}</td>
+              <td><a href="{{event.image_url}}">{{event.image_url}}</a></td>
               <td>{{event.description}}</td>
           </tr>
       </tbody>
