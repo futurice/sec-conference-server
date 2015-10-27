@@ -7,14 +7,14 @@
         <thead>
             <th></th>
             <th>Title</th>
-            <th>Image URL</th>
+            <th>Image</th>
             <th>Content</th>
         </thead>
         <tbody>
             <tr ng-repeat="infoItem in infos" class="infoPick">
                 <td><input type="button" value="Delete" class="btn btn-danger btn-sm" ng-click="deleteInfo(infoItem._id)"/></td>
                 <td><a href="#/infoItem/{{infoItem._id}}">{{infoItem.title | title}}</a></td>
-                <td><a href="{{infoItem.image}}">{{infoItem.image}}</a></td>
+                <td><a href="{{infoItem.image}}"><img ng-src="{{infoItem.image}}"></a></td>
                 <td>{{infoItem.content}}</td>
             </tr>
         </tbody>
