@@ -15,7 +15,7 @@ myAppServices.factory('Artist', ['$resource',
 
 myAppServices.factory('Event', ['$resource',
   function ($resource) {
-    return $resource('../api/v1/events/:eventId', {eventId: '@id'}, {update: {method: 'PUT'}});
+    return $resource('../api/v1/events/:eventId?sort=start_time', {eventId: '@id'}, {update: {method: 'PUT'}});
   }]);
 
 myAppServices.factory('News', ['$resource',
