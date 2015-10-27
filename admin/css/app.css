@@ -27,11 +27,6 @@ div.listing input[type="text"] {
     width: 19em;
 }
 
-.contentWrapper {
-    padding: 20px;
-}
-
-
 .artist {
     padding: 20px;
 }
@@ -48,6 +43,10 @@ div.listing input[type="text"] {
 .artistPick img {
     width: 100px;
     height: 100px;
+}
+
+table {
+    margin-top: 20px;
 }
 
 table tr td img {
@@ -70,15 +69,14 @@ p.formSubmit {
     padding-top: 1em;
 }
 
-table.listing tr td {
-    padding-left: 2em;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    border-bottom-style: dashed;
-    border-bottom-width: 1px;
-}
-
 pre {
     border: none;
     background: none;
+}
+
+
+@media (max-width: 991px) {
+    .container {
+        width: auto;
+    }
 }

@@ -3,11 +3,26 @@
         <input type="text" placeholder="New location name here" ng-model="createLocationName.name"/>
         <input type="button" class="btn btn-success" value="Create new" ng-click="createLocation()"/>
     </div>
-    <hr />
-    <table class="listing">
-        <tr ng-repeat="location in locations" class="locationPick">
-            <td><input type="button" value="Delete" class="btn btn-danger btn-sm" ng-click="deleteLocation(location._id)"/></td>
-            <td><a href="#/location/{{location._id}}">{{location.name | name}}</a></td>
-        </tr>
+    <table class="table">
+        <thead>
+            <th></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>X</th>
+            <th>Y</th>
+            <th>Width</th>
+            <th>Height</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="location in locations" class="locationPick">
+                <td><input type="button" value="Delete" class="btn btn-danger btn-sm" ng-click="deleteLocation(location._id)"/></td>
+                <td><a href="#/location/{{location._id}}">{{location.name | name}}</a></td>
+                <td>{{location.description}}</td>
+                <td>{{location.x}}</td>
+                <td>{{location.y}}</td>
+                <td>{{location.width}}</td>
+                <td>{{location.height}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>

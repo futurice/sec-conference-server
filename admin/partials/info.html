@@ -3,11 +3,20 @@
         <input type="text" placeholder="New info item title here" ng-model="createInfoTitle.title"/>
         <input type="button" class="btn btn-success" value="Create new" ng-click="createInfo()" />
     </div>
-    <hr />
-    <table class="listing">
-        <tr ng-repeat="infoItem in infos" class="infoPick">
-            <td><input type="button" value="Delete" class="btn btn-danger btn-sm" ng-click="deleteInfo(infoItem._id)"/></td>
-            <td><a href="#/infoItem/{{infoItem._id}}">{{infoItem.title | title}}</a></td>
-        </tr>
+    <table class="table">
+        <thead>
+            <th></th>
+            <th>Title</th>
+            <th>Image URL</th>
+            <th>Content</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="infoItem in infos" class="infoPick">
+                <td><input type="button" value="Delete" class="btn btn-danger btn-sm" ng-click="deleteInfo(infoItem._id)"/></td>
+                <td><a href="#/infoItem/{{infoItem._id}}">{{infoItem.title | title}}</a></td>
+                <td>{{infoItem.image}}</td>
+                <td>{{infoItem.content}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>

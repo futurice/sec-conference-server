@@ -3,11 +3,28 @@
       <input type="text" placeholder="New event name here" ng-model="createEventTitle.title"/>
       <input type="button" class="btn btn-success" value="Create new" ng-click="createEvent()"/>
   </div>
-  <hr />
-  <table class="listing">
-      <tr ng-repeat="event in events">
-          <td><input type="button" class="btn btn-danger btn-sm" value="Delete" ng-click="deleteEvent(event._id)"/></td>
-          <td><a href="#/event/{{event._id}}">{{event.title | title}}</a></td>
-      </tr>
+  <table class="table">
+      <thead>
+          <tr>
+              <th></th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Day</th>
+              <th>Start</th>
+              <th>End</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="event in events">
+              <td><input type="button" class="btn btn-danger btn-sm" value="Delete" ng-click="deleteEvent(event._id)"/></td>
+              <td><a href="#/event/{{event._id}}">{{event.title | title}}</a></td>
+              <td>{{event.location}}</td>
+              <td>{{event.day}}</td>
+              <td>{{event.start_time | date : 'd MMM y HH:mm'}}</td>
+              <td>{{event.end_time | date : 'd MMM y HH:mm'}}</td>
+              <td>{{event.description}}</td>
+          </tr>
+      </tbody>
   </table>
 </div>
