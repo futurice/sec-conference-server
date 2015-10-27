@@ -16,9 +16,10 @@
                         <!-- image_url -->
                         <div class="form-group">
                             <label for="image" class="col-sm-2 control-label">Image URL</label>
-                            <div class="col-sm-10">
+                            <div class="{{infoItem['image'] ? 'col-sm-6' : 'col-sm-10'}}">
                                 <input id="image" class="form-control" type="text" ng-model=infoItem['image'] />
                             </div>
+                            <img class="col-sm-4 image-preview" ng-show="infoItem['image']" ng-src="{{infoItem['image']}}">
                         </div>
                         <!-- content -->
                         <div class="form-group">

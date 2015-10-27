@@ -74,6 +74,15 @@ pre {
     background: none;
 }
 
+.image-preview {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .image-preview {
+        margin: 0.5em 0;
+    }
+}
 
 @media (max-width: 991px) {
     .container {

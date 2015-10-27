@@ -77,9 +77,10 @@
                         <!-- image_url -->
                         <div class="form-group">
                             <label for="image_url" class="col-sm-2 control-label">Image URL</label>
-                            <div class="col-sm-10">
+                            <div class="{{event['image_url'] ? 'col-sm-6' : 'col-sm-10'}}">
                                 <input id="image_url" class="form-control" type="text" ng-model=event['image_url'] />
                             </div>
+                            <img class="col-sm-4 image-preview" ng-show="event['image_url']" ng-src="{{event['image_url']}}">
                         </div>
                     </fieldset>
                     <legend>Speaker 1</legend>
