@@ -102,6 +102,10 @@ myAppControllers.
       $scope.locations = locations;
     });
 
+    $scope.setDay = function () {
+      $scope.event.day = moment($scope.event.start_time).format('dddd'); // jshint ignore:line
+    };
+
     $scope.saveEvent = function () {
       console.log('save');
       handleSaveResponse(Event.update({ eventId: $scope.event._id }, $scope.event), '/events', $scope);
