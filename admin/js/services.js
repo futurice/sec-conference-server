@@ -42,3 +42,19 @@ myAppServices.factory('Festival', ['$resource',
   function ($resource) {
     return $resource('../api/v1/festival/:festivalId', {festivalId: '@id'}, {update: {method: 'PUT'}});
   }]);
+
+myAppServices.factory('handleSaveResponse', ['$location',
+  function ($location) {
+    return function(resource, successURL, $scope) {
+      $scope.errorMessage = '';
+      return resource
+        .$promise
+        .then(function () {
+          $location.path(successURL);
+        })
+        .catch(function (err) {
+          console.log('Failed to save', err);
+          $scope.errorMessage = 'Failed to save.';
+        });
+    };
+  }]);

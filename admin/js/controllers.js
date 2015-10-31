@@ -85,7 +85,8 @@ myAppControllers.
   }]);
 
 myAppControllers.
-  controller('EventCtrl', ['$scope', '$routeParams', '$location', 'Event', 'Locations', '$http', function ($scope, $routeParams, $location, Event, Locations, $http) {
+  controller('EventCtrl', ['$scope', '$routeParams', '$location', 'Event', 'Locations', '$http', 'handleSaveResponse',
+    function ($scope, $routeParams, $location, Event, Locations, $http, handleSaveResponse) {
 
     Event.get({eventId: $routeParams.eventId}, function (event) {
       var renderDate = function (dateStr) {
@@ -103,7 +104,7 @@ myAppControllers.
 
     $scope.saveEvent = function () {
       console.log('save');
-      Event.update({ eventId: $scope.event._id}, $scope.event);
+      handleSaveResponse(Event.update({ eventId: $scope.event._id }, $scope.event), '/events', $scope);
     };
 
     $scope.schema = [];
@@ -201,7 +202,8 @@ myAppControllers.
   }]);
 
 myAppControllers.
-  controller('LocationCtrl', ['$scope', '$routeParams', '$location', 'Location', '$http', function ($scope, $routeParams, $location, Location, $http) {
+  controller('LocationCtrl', ['$scope', '$routeParams', '$location', 'Location', '$http', 'handleSaveResponse',
+    function ($scope, $routeParams, $location, Location, $http, handleSaveResponse) {
 
     Location.get({locationId: $routeParams.locationId}, function (location) {
       $scope.location = location;
@@ -209,7 +211,7 @@ myAppControllers.
 
     $scope.saveLocation = function () {
       console.log('save');
-      Location.update({ locationId: $scope.location._id}, $scope.location);
+      handleSaveResponse(Location.update({ locationId: $scope.location._id }, $scope.location), '/locations', $scope);
     };
 
     $scope.schema = [];
@@ -253,7 +255,8 @@ myAppControllers.
   }]);
 
 myAppControllers.
-  controller('InfoCtrl', ['$scope', '$routeParams', '$location', 'Info', '$http', function ($scope, $routeParams, $location, Info, $http) {
+  controller('InfoCtrl', ['$scope', '$routeParams', '$location', 'Info', '$http', 'handleSaveResponse',
+    function ($scope, $routeParams, $location, Info, $http, handleSaveResponse) {
 
     Info.get({infoItemId: $routeParams.infoItemId}, function (info) {
       $scope.infoItem = info;
@@ -261,7 +264,7 @@ myAppControllers.
 
     $scope.saveInfo = function () {
       console.log('save');
-      Info.update({ infoItemId: $scope.infoItem._id}, $scope.infoItem);
+      handleSaveResponse(Info.update({ infoItemId: $scope.infoItem._id }, $scope.infoItem), '/info', $scope);
     };
 
     $scope.schema = [];
