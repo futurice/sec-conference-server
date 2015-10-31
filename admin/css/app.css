@@ -8,6 +8,10 @@ h1 {
     font-size: 45px;
 }
 
+.container {
+    overflow: auto;
+}
+
 div.listing input[type="text"] {
     width: 19em;
 }
