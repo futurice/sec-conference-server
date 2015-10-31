@@ -4,6 +4,10 @@
     font-size: 16px;
 }
 
+h1 {
+    font-size: 45px;
+}
+
 div.listing input[type="text"] {
     width: 19em;
 }
