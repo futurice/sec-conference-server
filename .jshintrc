@@ -18,6 +18,7 @@
   "globals"   : {
     "$"          : false,
     "angular"    : false,
+    "moment"     : false,
     /* MOCHA */
     "describe"   : false,
     "it"         : false,

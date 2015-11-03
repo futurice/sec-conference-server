@@ -111,6 +111,8 @@ myAppControllers.
       handleSaveResponse(Event.update({ eventId: $scope.event._id }, $scope.event), '/events', $scope);
     };
 
+    $scope.weekdays = moment.weekdays();
+
     $scope.schema = [];
 
     $http.get('/api/v1/schema/event').success(function (data) {
