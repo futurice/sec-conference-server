@@ -57,6 +57,10 @@ textarea.json {
     background-color:#CCCCCC;
 }
 
+.checkbox-inline {
+    padding-left: 25px;
+}
+
 p.formSubmit {
     padding-top: 1em;
 }
