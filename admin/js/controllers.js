@@ -111,6 +111,10 @@ myAppControllers.
       handleSaveResponse(Event.update({ eventId: $scope.event._id }, $scope.event), '/events', $scope);
     };
 
+    $scope.closeEvent = function () {
+      $location.path('/events');
+    };
+
     $scope.weekdays = moment.weekdays();
 
     $scope.schema = [];
@@ -220,6 +224,10 @@ myAppControllers.
       handleSaveResponse(Location.update({ locationId: $scope.location._id }, $scope.location), '/locations', $scope);
     };
 
+    $scope.closeLocation = function () {
+      $location.path('/locations');
+    };
+
     $scope.schema = [];
 
     $http.get('/api/v1/schema/location').success(function (data) {
@@ -271,6 +279,10 @@ myAppControllers.
     $scope.saveInfo = function () {
       console.log('save');
       handleSaveResponse(Info.update({ infoItemId: $scope.infoItem._id }, $scope.infoItem), '/info', $scope);
+    };
+
+    $scope.closeInfo = function () {
+      $location.path('/info');
     };
 
     $scope.schema = [];

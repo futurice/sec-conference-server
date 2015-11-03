@@ -29,10 +29,13 @@
                             </div>
                         </div>
                     </fieldset>
-                    <p class="formSubmit">
-                        <button type="submit" class="btn btn-primary" value="Save" ng-click="saveInfo()">Save</button>
-                        <span class="submit-error">{{errorMessage}}</span>
-                    </p>
+                    <div class="form-submit">
+                        <div>
+                            <button type="submit" class="btn btn-primary" value="Save" ng-click="saveInfo()">Save</button>
+                            <button class="btn btn-info" value="Cancel" ng-click="closeInfo()">Cancel</button>
+                        </div>
+                        <span class="submit-error {{errorClass}}">{{errorMessage}}</span>
+                    </div>
                 </form>
             </div>
         </div>

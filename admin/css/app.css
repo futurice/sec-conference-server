@@ -61,8 +61,13 @@ textarea.json {
     padding-left: 25px;
 }
 
-p.formSubmit {
-    padding-top: 1em;
+.form-submit {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.form-submit button {
+    margin: 0 0.5em;
 }
 
 pre {
@@ -75,8 +80,14 @@ pre {
 }
 
 .submit-error {
+    display: none;
+    font-weight: bold;
     color: #e51c23;
-    margin-left: 1em;
+}
+
+.submit-error.show {
+    display: inline;
+    margin-top: 1em;
 }
 
 @media (max-width: 767px) {

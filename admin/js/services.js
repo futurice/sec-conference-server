@@ -47,6 +47,7 @@ myAppServices.factory('handleSaveResponse', ['$location',
   function ($location) {
     return function(resource, successURL, $scope) {
       $scope.errorMessage = '';
+      $scope.errorClass = '';
       return resource
         .$promise
         .then(function () {
@@ -55,6 +56,7 @@ myAppServices.factory('handleSaveResponse', ['$location',
         .catch(function (err) {
           console.log('Failed to save', err);
           $scope.errorMessage = 'Failed to save.';
+          $scope.errorClass = 'show';
         });
     };
   }]);
