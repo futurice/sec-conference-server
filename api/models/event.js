@@ -8,6 +8,7 @@ var EventSchema = new Schema({
   location: String,
   description: String,
   bar_camp: Boolean,    // jshint ignore:line
+  key_talk: Boolean,    // jshint ignore:line
   day: String,
   image_url: String,    // jshint ignore:line
   starred_count: Number, // jshint ignore:line
