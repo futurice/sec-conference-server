@@ -19,7 +19,7 @@ function shiftTimes(item) {
       var shiftedTimestamp =
         new Date(item[key]).getTime() +
         60 * 60 * 1000/*ms*/;
-      item[key] = new Date(shiftedTimestamp).toString();
+      item[key] = new Date(shiftedTimestamp);
     });
 }
 
