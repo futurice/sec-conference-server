@@ -7,37 +7,6 @@ var Location = require('../api/models/location');
 var Festival = require('../api/models/festival');
 var Localise = require('../lib/localise');
 
-function shiftTimes(item) {
-  onlyAttributes = ['start_time', 'end_time'];
-
-  Object.keys(item)
-    .filter(function(key) {
-      return onlyAttributes.indexOf(key) > -1;
-    })
-    .forEach(function(key) {
-      // add one hour for time attributes
-      var shiftedTimestamp =
-        new Date(item[key]).getTime() +
-        60 * 60 * 1000/*ms*/;
-      item[key] = new Date(shiftedTimestamp).toString();
-    });
-}
-
-function transformItem(item) {
-  shiftTimes(item);
-}
-
-function transformResult(result) {
-  if (result instanceof Array) {
-    result.forEach(function(item) {
-      transformItem(item);
-    });
-  } else {
-    transformItem(result);
-  }
-  return result;
-}
-
 module.exports = function(app, apiVersion) {
   restify.defaults({
     outputFn: Localise.localiseApiCallResult,
@@ -54,15 +23,7 @@ module.exports = function(app, apiVersion) {
     }
   });
   restify.serve(app, News);
-  restify.serve(app, Event, {
-    outputFn: function(req, res) {
-      res
-        .status(req.erm.statusCode)
-        .json(
-          transformResult(req.erm.result)
-        );
-    }
-  });
+  restify.serve(app, Event);
   restify.serve(app, Location);
   restify.serve(app, Festival, { plural: false });
 };
